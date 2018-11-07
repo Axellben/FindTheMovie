@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+
+<style>
+  .title {
+    text-align: center
+  }
+
+  .movieDiv {
+    text-align: center;
+  }
+</style>
+
+<h1 class="title">Movies with the keyword
+  <strong>
+    <%= searchTerm %>
+  </strong> 🎥
+</h1>
+
+<% movies.forEach(movie =>{ %>
+<div class="movieDiv">
+
+  <h4>
+    <%= movie.Title %>
+  </h4>
+  <img src=<%=movie.Poster %>>
+
+</div>
+<% }) %>
